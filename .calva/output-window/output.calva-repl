@@ -1,0 +1,399 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉test.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉test.core꞉> 
+nil
+clj꞉test.crud꞉> 
+#'test.crud/set-theme
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> 
+; Execution error (IllegalArgumentException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Don't know how to create ISeq from: test.database$get_all_records
+clj꞉test.crud꞉> 
+; Execution error (ClassCastException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
+clj꞉test.crud꞉> 
+; Execution error (IllegalArgumentException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Don't know how to create ISeq from: test.database$get_all_records
+clj꞉test.crud꞉> 
+#'test.crud/database
+clj꞉test.crud꞉> database
+"clojure.lang.LazySeq@22b680b6, clojure.lang.LazySeq@262031f4, clojure.lang.LazySeq@27d50a93, clojure.lang.LazySeq@2989e332, clojure.lang.LazySeq@2b3ebbd1, clojure.lang.LazySeq@2cf39470"
+clj꞉test.crud꞉> 
+(database)
+; Execution error (ClassCastException) at test.crud/eval14482 (form-init2507984460454195186.clj:40).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉test.crud꞉> (printf database)
+clojure.lang.LazySeq@22b680b6, clojure.lang.LazySeq@262031f4, clojure.lang.LazySeq@27d50a93, clojure.lang.LazySeq@2989e332, clojure.lang.LazySeq@2b3ebbd1, clojure.lang.LazySeq@2cf39470nil
+clj꞉test.crud꞉> (println database)
+clojure.lang.LazySeq@22b680b6, clojure.lang.LazySeq@262031f4, clojure.lang.LazySeq@27d50a93, clojure.lang.LazySeq@2989e332, clojure.lang.LazySeq@2b3ebbd1, clojure.lang.LazySeq@2cf39470
+nil
+clj꞉test.crud꞉> 
+(dorun (map println database))
+c
+l
+o
+j
+u
+r
+e
+.
+l
+a
+n
+g
+.
+L
+a
+z
+y
+S
+e
+q
+@
+2
+2
+b
+6
+8
+0
+b
+6
+,
+ 
+c
+l
+o
+j
+u
+r
+e
+.
+l
+a
+n
+g
+.
+L
+a
+z
+y
+S
+e
+q
+@
+2
+6
+2
+0
+3
+1
+f
+4
+,
+ 
+c
+l
+o
+j
+u
+r
+e
+.
+l
+a
+n
+g
+.
+L
+a
+z
+y
+S
+e
+q
+@
+2
+7
+d
+5
+0
+a
+9
+3
+,
+ 
+c
+l
+o
+j
+u
+r
+e
+.
+l
+a
+n
+g
+.
+L
+a
+z
+y
+S
+e
+q
+@
+2
+9
+8
+9
+e
+3
+3
+2
+,
+ 
+c
+l
+o
+j
+u
+r
+e
+.
+l
+a
+n
+g
+.
+L
+a
+z
+y
+S
+e
+q
+@
+2
+b
+3
+e
+b
+b
+d
+1
+,
+ 
+c
+l
+o
+j
+u
+r
+e
+.
+l
+a
+n
+g
+.
+L
+a
+z
+y
+S
+e
+q
+@
+2
+c
+f
+3
+9
+4
+7
+0
+nil
+clj꞉test.crud꞉> 
+; Jacking in...
+; nREPL Connection was closed
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉test.core꞉> 
+; Jack-in done.
+clj꞉test.core꞉> 
+nil
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> 
+#'test.crud/set-theme
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> 
+; Execution error (database
+ArityException) at test.crud/fn (form-init1578833354238906811.clj:20).
+; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
+clj꞉test.crud꞉> 
+#'test.crud/database
+clj꞉test.crud꞉> database
+"clojure.lang.LazySeq@22b680b6, clojure.lang.LazySeq@262031f4, clojure.lang.LazySeq@27d50a93, clojure.lang.LazySeq@2989e332, clojure.lang.LazySeq@2b3ebbd1, clojure.lang.LazySeq@2cf39470"
+clj꞉test.crud꞉> 
+#'test.crud/database
+clj꞉test.crud꞉> 
+database
+"[1 \"Ростов-на-Дону\" \"В\" -8 12 12], [3 \"Ростов-на-Дону\" \"В\" -8 12 12], [4 \"Ростов-на-Дону\" \"В\" -8 12 12], [5 \"Ростов-на-Дону\" \"В\" -8 12 12], [6 \"Ростов-на-Дону\" \"В\" -8 12 12], [7 \"Ростов-на-Дону\" \"В\" -8 12 12]"
+clj꞉test.crud꞉> 
+#'test.crud/database
+clj꞉test.crud꞉> database
+"[\"Ростов-на-Дону\" \"В\"], [\"Ростов-на-Дону\" \"В\"], [\"Ростов-на-Дону\" \"В\"], [\"Ростов-на-Дону\" \"В\"], [\"Ростов-на-Дону\" \"В\"], [\"Ростов-на-Дону\" \"В\"]"
+clj꞉test.crud꞉> 
+#'test.crud/database
+clj꞉test.crud꞉> 
+database
+[["Ростов-на-Дону" "В"]
+ ["Ростов-на-Дону" "В"]
+ ["Ростов-на-Дону" "В"]
+ ["Ростов-на-Дону" "В"]
+ ["Ростов-на-Дону" "В"]
+ ["Ростов-на-Дону" "В"]]
+clj꞉test.crud꞉> 
+#'test.crud/database
+clj꞉test.crud꞉> 
+database
+["Ростов-на-Дону В" "Ростов-на-Дону В" "Ростов-на-Дону В" "Ростов-на-Дону В" "Ростов-на-Дону В" "Ростов-на-Дону В"]
+clj꞉test.crud꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉test.core꞉> 
+; Jack-in done.
+clj꞉test.core꞉> 
+nil
+clj꞉test.crud꞉> 
+#'test.crud/set-theme
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> 
+#'test.crud/database
+clj꞉test.crud꞉> 
+#'test.crud/create-entry
+clj꞉test.crud꞉> 
+#'test.crud/update-entry
+clj꞉test.crud꞉> 
+#'test.crud/delete-entry
+clj꞉test.crud꞉> 
+test.crud.Filtered-db
+clj꞉test.crud꞉> 
+#'test.crud/filter-db
+clj꞉test.crud꞉> 
+#'test.crud/prefix?
+clj꞉test.crud꞉> 
+#'test.crud/crud-panel
+clj꞉test.crud꞉> 
+#'test.crud/-main
+clj꞉test.crud꞉> 
+(show-options text)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:330:1).
+; Unable to resolve symbol: show-options in this context
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> (show-options text)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:335:17).
+; Unable to resolve symbol: show-options in this context
+clj꞉test.crud꞉> 
+(d/show-options text)
+seesaw.core$text
+                    Option  Notes/Examples
+--------------------------  --------------
+; Execution error (IllegalArgumentException) at seesaw.options/eval368$fn$G (options.clj:17).
+; No implementation of method: :get-option-maps* of protocol: #'seesaw.options/OptionProvider found for class: seesaw.core$text
+clj꞉test.crud꞉> 
+; Execution error (IllegalStateException) at test.crud/eval14569$loading (form-init7654185352949179745.clj:1).
+; config! already refers to: #'seesaw.core/config! in namespace: test.crud
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> 
+(d/show-options text)
+seesaw.core$text
+                    Option  Notes/Examples
+--------------------------  --------------
+; Execution error (IllegalArgumentException) at seesaw.options/eval368$fn$G (options.clj:17).
+; No implementation of method: :get-option-maps* of protocol: #'seesaw.options/OptionProvider found for class: seesaw.core$text
+clj꞉test.crud꞉> 
+(:use [seesaw.dev :as d])
+; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:358:1).
+; seesaw.dev
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> 
+(d/show-options text)
+seesaw.core$text
+                    Option  Notes/Examples
+--------------------------  --------------
+; Execution error (IllegalArgumentException) at seesaw.options/eval368$fn$G (options.clj:17).
+; No implementation of method: :get-option-maps* of protocol: #'seesaw.options/OptionProvider found for class: seesaw.core$text
+clj꞉test.crud꞉> 
+nil
+clj꞉test.crud꞉> 
+(d/show-options text)
+seesaw.core$text
+                    Option  Notes/Examples
+--------------------------  --------------
+; Execution error (IllegalArgumentException) at seesaw.options/eval368$fn$G (options.clj:17).
+; No implementation of method: :get-option-maps* of protocol: #'seesaw.options/OptionProvider found for class: seesaw.core$text
+clj꞉test.crud꞉> 
+(ns test.crud
+  (:require [clojure.string :only [split trim join]]
+            [seesaw.bind :as b]
+            [seesaw.border :refer [empty-border]]
+            [seesaw.core :as s]
+            [seesaw.mig :refer [mig-panel]]
+            test.cor
+            [test.database :as db]
+            [seesaw.dev :as d])
+  (:import [com.formdev.flatlaf FlatDarkLaf]))
+nil
+clj꞉test.crud꞉> 
+(d/show-options s/text)
+seesaw.core$text
+                    Option  Notes/Examples
+--------------------------  --------------
+; Execution error (IllegalArgumentException) at seesaw.options/eval368$fn$G (options.clj:17).
+; No implementation of method: :get-option-maps* of protocol: #'seesaw.options/OptionProvider found for class: seesaw.core$text
+clj꞉test.crud꞉> 
+; nREPL Connection was closed
